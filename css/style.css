@@ -360,4 +360,16 @@ p { margin: 0; }
   .nm-lead { margin-inline: auto; }
   .nm-copy .feats { display: inline-grid; text-align: left; }
 }
+.nm-full { position: relative; margin-top: 110px; }
+.nm-full-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 28px; }
+.nm-full-head h3 { font-size: clamp(28px, 4vw, 44px); letter-spacing: -.035em; }
+.nm-full-head .eyebrow { margin-bottom: 10px; }
+.nm-full-head .nm-note { margin-top: 0; }
+.nm-wide { margin: 0; aspect-ratio: 16 / 9; border-radius: 24px; overflow: hidden; background: #000; border: 1px solid rgba(255, 255, 255, .12); box-shadow: 0 50px 100px -30px rgba(0, 0, 0, .9), 0 0 120px -30px rgba(143, 208, 255, .3); }
+.nm-wide video { display: block; width: 100%; height: 100%; object-fit: cover; }
+@media (max-width: 834px) {
+  .nm-full { margin-top: 80px; }
+  .nm-full-head { flex-direction: column; align-items: center; text-align: center; }
+  .nm-wide { border-radius: 16px; }
+}
 /* NOVA MARCA (temporário) — fim */
