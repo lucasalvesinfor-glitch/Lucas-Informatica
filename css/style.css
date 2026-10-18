@@ -50,7 +50,7 @@ p { margin: 0; }
 /* ---------- navegação ---------- */
 .nav { position: fixed; inset: 0 0 auto; z-index: 50; height: 52px; background: rgba(0, 0, 0, .72); -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(255, 255, 255, .08); }
 .nav-in { width: min(1080px, 100% - 44px); height: 100%; margin-inline: auto; display: flex; align-items: center; gap: 28px; }
-.nav-logo img { height: 38px; width: auto; }
+.nav-logo img { height: 30px; width: auto; }
 .nav nav { display: flex; gap: 30px; margin-left: auto; }
 .nav nav a { color: #d2d2d7; font-size: 13px; transition: color .2s; }
 .nav nav a:hover { color: #fff; }
@@ -81,7 +81,7 @@ p { margin: 0; }
 .lid-front, .lid-back { position: absolute; inset: 0; border-radius: calc(var(--w) * .03) calc(var(--w) * .03) 4px 4px; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
 .lid-front { background: #0a0a0a; border: 1px solid #3a3a3c; padding: 2.4% 2.4% 3.2%; box-shadow: inset 0 0 0 2px #151515; }
 .lid-back { transform: rotateY(180deg) translateZ(1px); background: linear-gradient(160deg, #e9e9ec, #b9babd 60%, #9fa0a4); display: grid; place-items: center; }
-.lid-back img { width: 26%; opacity: .6; transform: rotate(180deg); }
+.lid-back img { width: 20%; opacity: .7; transform: rotate(180deg); }
 .screen { position: relative; height: 100%; border-radius: 6px; overflow: hidden; background: #222024; }
 .scr { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; transition: none; }
 .scr-a { background: #222024; }
@@ -255,7 +255,7 @@ p { margin: 0; }
 /* ---------- rodapé ---------- */
 .foot { background: var(--light); color: var(--gray-2); font-size: 12px; padding: 40px 0 30px; }
 .foot-top { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-bottom: 22px; border-bottom: 1px solid #d2d2d7; }
-.foot-top img { height: 34px; width: auto; }
+.foot-top img { height: 28px; width: auto; }
 .foot-top nav { display: flex; gap: 22px; flex-wrap: wrap; }
 .foot-top nav a:hover { color: var(--ink); text-decoration: underline; }
 .foot-bottom { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; padding-top: 18px; }
@@ -338,3 +338,26 @@ p { margin: 0; }
   .js .reveal { opacity: 1; transform: none; transition: none; }
   .tilt, .photo img { transition: none; }
 }
+
+/* =========================================================
+   NOVA MARCA (temporário) — seção com o vídeo de lançamento
+   Para remover: apague este bloco inteiro, a seção de mesmo
+   nome no index.html e a pasta video/.
+   ========================================================= */
+.novamarca { position: relative; overflow: hidden; background: var(--black); color: #fff; padding: 130px 0; }
+.novamarca::before { content: ""; position: absolute; left: 20%; top: 50%; width: 900px; height: 900px; translate: -50% -50%; background: radial-gradient(closest-side, rgba(143, 208, 255, .2), transparent); pointer-events: none; }
+.nm-grid { position: relative; display: grid; grid-template-columns: 360px 1fr; gap: 90px; align-items: center; }
+.nm-phone { margin: 0; aspect-ratio: 9 / 16; border-radius: 40px; overflow: hidden; background: #000; border: 6px solid #2a2e35; box-shadow: 0 50px 100px -30px rgba(0, 0, 0, .9), 0 0 90px -10px rgba(143, 208, 255, .3); }
+.nm-phone video { display: block; width: 100%; height: 100%; object-fit: cover; }
+.nm-lead { margin-top: 26px; font-size: clamp(19px, 2vw, 22px); line-height: 1.45; color: #a1a1a6; max-width: 560px; }
+.nm-copy .feats { margin-top: 30px; }
+.nm-note { margin-top: 30px; font-size: 15px; color: var(--gray); }
+@media (max-width: 834px) {
+  .novamarca { padding: 90px 0; }
+  .nm-grid { grid-template-columns: 1fr; gap: 50px; }
+  .nm-phone { width: min(320px, 82vw); justify-self: center; order: 2; }
+  .nm-copy { text-align: center; }
+  .nm-lead { margin-inline: auto; }
+  .nm-copy .feats { display: inline-grid; text-align: left; }
+}
+/* NOVA MARCA (temporário) — fim */

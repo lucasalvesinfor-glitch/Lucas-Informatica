@@ -6,7 +6,7 @@
 
   /* ---------- anos de experiência e ano atual ---------- */
   const year = new Date().getFullYear();
-  document.querySelectorAll('[data-years]').forEach(el => { el.textContent = Math.max(1, year - 2019); });
+  document.querySelectorAll('[data-years]').forEach(el => { el.textContent = Math.max(1, year - 2016); });
   document.querySelectorAll('[data-year]').forEach(el => { el.textContent = year; });
 
   /* ---------- menu mobile ---------- */
